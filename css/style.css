@@ -1,0 +1,121 @@
+.wrap{
+    width: 100%;
+    height: 100vh;
+    background-color: #66b4da;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game{
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 550px;
+    height: 550px;
+    background-color: #055c91;
+    display: grid;
+    grid-template-areas:
+        "A A A A A A A A A A A"/*0*/
+        "B C C C C C C C C C C"/*1*/
+        "B C C C C C C C C C C"/*2*/
+        "B C C C C C C C C C C"/*3*/
+        "B C C C C C C C C C C"/*4*/
+        "B C C C C C C C C C C"/*5*/
+        "B C C C C C C C C C C"/*6*/
+        "B C C C C C C C C C C"/*7*/
+        "B C C C C C C C C C C"/*8*/
+        "B C C C C C C C C C C"/*9*/
+        "B C C C C C C C C C C";/*10*/
+}
+.letters{
+    box-sizing: border-box;
+    grid-area: A;
+    display: grid;
+    grid-template-columns: repeat(11,1fr);
+
+}
+.numbers{
+    box-sizing: border-box;
+    grid-area: B;
+    display: grid;
+    grid-template-rows: repeat(10,1fr);
+}
+.field{
+    box-sizing: border-box;
+    border-width: 1px 0px 0px 1px;
+    border-style:solid;
+    grid-area: C;
+    display: grid;
+    grid-template-rows: repeat(10,1fr);
+}
+.line{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    border-bottom: 1px solid #01243b;
+}
+.line:last-child{
+    border: none;
+}
+.cell{
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.line-cell{
+    box-sizing: border-box;
+    border-right: 1px solid #01243b;
+}
+.line-cell:last-child{
+    border: none;
+}
+
+.miss{
+    background: url("../img/miss.png") no-repeat center;
+    background-size: contain;
+}
+.hit{
+    background: url("../img/hit.png") no-repeat center;
+    background-size: contain;
+}
+.form-wrap{
+    bottom: 15%;
+    right: 3%;
+    position: absolute;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.messageArea-wrap{
+    position: absolute;
+    top:15%;
+    left:5%;
+    background-color: #2586b3;
+    display: flex;
+    
+    min-height: 100px;
+    width: 250px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+#messageArea{
+    padding: 10px;
+    color: white;
+    font-size: 2em;
+}
+#fireButton{
+    background-color: #2586b3;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    height: 30px;
+    margin: 3px;
+}
+#guessInput{
+    border-radius: 5px;
+    padding: 5px;
+    margin: 3px;
+}
